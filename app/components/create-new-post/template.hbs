@@ -1,0 +1,16 @@
+<h3>Create a New Post</h3>
+
+<form id="NewPost">
+    <p>
+      {{input value=newPost.firstname placeholder="First Name"}}
+      {{input value=newPost.lastname placeholder="Last Name"}}
+      {{input value=newPost.year placeholder="Year"}}
+      {{input value=newPost.url placeholder="Last Name"}}
+    </p>
+    <p>
+      {{textarea value=newPost.message placeholder="Content" rows="10" cols="140"}}
+    </p>
+    <p>
+        <button {{action "createPost"}}>Publish</button>
+    </p>
+</form>
