@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/bmcap';
     ENV.locationType = 'hash';
-    ENV.apiHost = '<% replace with the URL to your deployed API %>';
+    ENV.apiHost = 'https://git.heroku.com/bmcap.git';
   }
 
   return ENV;
