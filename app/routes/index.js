@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function () {
-      return {};
+      return this.store.findAll('post');
   },
 
   actions: {
@@ -12,8 +12,7 @@ export default Ember.Route.extend({
         last_name: model.last_name,
         message: model.message,
         url: model.url,
-        year: model.year,
-        created_at: new Date()
+        year: model.year
       });
       post.save();
     }
