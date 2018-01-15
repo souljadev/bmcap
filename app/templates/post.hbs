@@ -4,16 +4,16 @@
 <article>
     <br>
 
-    <img src="{{model.url}}"Z>
+    <img src="{{model.url}}" width=100px>
     <h3>Class of: {{model.year}}</h3>
     <p>{{model.message}}</p>
 
     <i>
-      (Posted on {{model.created_at}}, Created by {{model.first_name}} {{model.last_name}})
+      (Created by {{model.first_name}} {{model.last_name}})
     </i>
     <br>
 
   {{#delete-post post=model deletePost="deletePost"}}{{/delete-post}}
-  {{update-post}}
+  {{#update-post post=model updatePost="updatePost"}}{{/update-post}}
     <hr>
 </article>

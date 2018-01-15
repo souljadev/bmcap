@@ -1,1 +1,17 @@
 <button {{action "showUpdateForm" showUpdateForm='showUpdateForm'}}>Update</button>
+
+
+<form class="formVisible">
+        <h3>Update this post</h3>
+        <i>(must click button to save)</i>
+        <br>
+      <p>
+        Title:       {{input type="text" placeholder=post.title value=post.title}} <br>
+        First Name:  {{input type="text" placeholder=post.first_name value=post.first_name}} <br>
+        Last Name:   {{input type="text" placeholder=post.last_name value=post.last_name}} <br>
+        Picture Url: {{input type="text" placeholder=post.url value=post.url}} <br>
+        Year:        {{input type="text" placeholder=post.year value=post.year}} <br>
+        Message:     {{input type="text" placeholder=post.message value=post.message}} <br>
+      </p>
+
+</form>
