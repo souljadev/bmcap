@@ -9,6 +9,7 @@ export default Ember.Component.extend({
             this.set('newPost.last_name', null);
             this.set('newPost.year', null);
             this.set('newPost.url', null);
+            this.set('newPost.title', null);
             this.set('newPost.message', null);
         }
     }
