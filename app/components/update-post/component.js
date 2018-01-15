@@ -8,8 +8,8 @@ export default Ember.Component.extend({
         toggleUpdateButton: function () {
           return this.toggleProperty('postHeaderHidden');
         },
-        showUpdateForm: function () {
-          console.log("hi I can submit");
+        updatePost: function () {
+          return this.sendAction('updatePost', this.get('post'));
       }
     }
 });
