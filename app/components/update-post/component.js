@@ -1,10 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: 'showingPost',
+  classNameBindings: ['postHeaderHidden'],
+  postHeaderHidden: true,
   actions: {
-        showUpdateForm: function (model) {
-            console.log("update form");
-            console.log(model);
+        toggleUpdateButton: function () {
+          return this.toggleProperty('postHeaderHidden');
+        },
+        showUpdateForm: function () {
+          console.log("hi I can submit");
       }
     }
 });
