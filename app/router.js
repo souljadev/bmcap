@@ -10,6 +10,8 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
+  this.route('posts');
+  this.route('post', { path: '/posts/:post_id' });
 });
 
 export default Router;

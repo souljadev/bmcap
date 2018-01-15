@@ -6,5 +6,6 @@ export default DS.Model.extend({
   created_at: DS.attr('date'),
   message: DS.attr('string'),
   url: DS.attr('string'),
-  year: DS.attr('number')
+  year: DS.attr('number'),
+  posts: DS.hasMany('post')
 });
