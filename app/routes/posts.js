@@ -10,20 +10,12 @@ export default Ember.Route.extend({
       let post = this.store.createRecord('post', {
         first_name: model.first_name,
         last_name: model.last_name,
+        title: model.title,
         message: model.message,
         url: model.url,
         year: model.year
       });
       post.save();
-    },
-    deletePost: function (model) {
-      console.log("am i cliccked?");
-      console.log(model);
-      // this.model.destroyRecord().then(() => {
-      //   this.transitionTo('index');
-      // }).catch((reason) => {
-      //   post.reload();
-      // });
     }
   }
 });

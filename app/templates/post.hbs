@@ -1,7 +1,6 @@
 
 {{#link-to 'posts'}} Go to posts {{/link-to}}
 
-
 <article>
     <br>
 
@@ -13,6 +12,8 @@
       (Posted on {{model.created_at}}, Created by {{model.first_name}} {{model.last_name}})
     </i>
     <br>
-    {{delete-post}} {{update-post}}
+
+  {{#delete-post post=model deletePost="deletePost"}}{{/delete-post}}
+  {{update-post}}
     <hr>
 </article>

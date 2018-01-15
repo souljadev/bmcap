@@ -1,11 +1,11 @@
+
+{{#link-to 'index'}} Go to index {{/link-to}}
+
+
 {{#each model as |post|}}
 
     {{#blog-post post=post}} {{/blog-post}}
 
-
-
 {{/each}}
 
 {{#create-new-post newPost=model createPost="createPost"}}{{/create-new-post}}
-
-{{#link-to 'posts'}} Go to posts {{/link-to}}
