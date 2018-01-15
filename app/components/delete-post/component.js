@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    deletePost: function () {
-      console.log('Hi Im Deleted')
+    deletePost: function (post) {
+      return this.sendAction('deletePost', post);
       }
     }
 });

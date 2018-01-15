@@ -15,6 +15,15 @@ export default Ember.Route.extend({
         year: model.year
       });
       post.save();
+    },
+    deletePost: function (post) {
+      console.log("am i cliccked?");
+      console.log(post);
+      // this.model.destroyRecord().then(() => {
+      //   this.transitionTo('index');
+      // }).catch((reason) => {
+      //   post.reload();
+      // });
     }
   }
 });
