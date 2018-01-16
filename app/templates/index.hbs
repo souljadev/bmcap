@@ -1,5 +1,7 @@
+
+
 {{#each model as |post|}}
-    <ul>
-      <li>{{#link-to 'post' post }} {{post.title}} {{/link-to}}</li>
-    </ul>
+
+    {{#blog-post post=post}} {{/blog-post}}
+
 {{/each}}

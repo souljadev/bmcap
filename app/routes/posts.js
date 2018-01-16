@@ -15,13 +15,7 @@ export default Ember.Route.extend({
         url: model.url,
         year: model.year
       });
-      post.save()
-      .then(() => this.transitionTo('application'))
-      .then(() => this.get('flashMessages').success('Create Successful!'))
-      .catch(() => {
-      this.get('flashMessages')
-      .danger('There was a problem. Please try again.');
-      });
+      post.save();
     }
   }
 });
