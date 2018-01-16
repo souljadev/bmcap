@@ -6,7 +6,13 @@ export default Ember.Route.extend({
   },
   actions: {
     deletePost(model) {
-      model.destroyRecord();
+      model.destroyRecord()
+      .then(() => this.transitionTo('application'))
+      .then(() => this.get('flashMessages').success('Delete Successful!'))
+      .catch(() => {
+      this.get('flashMessages')
+      .danger('There was a problem. Please try again.');
+      });
     },
     updatePost(model) {
         model.set('post', {
@@ -17,7 +23,13 @@ export default Ember.Route.extend({
         url: model.url,
         year: model.year
       });
-        model.save();
+        model.save()
+        .then(() => this.transitionTo('application'))
+        .then(() => this.get('flashMessages').success('Update Successful!'))
+        .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+        });
+      },
     }
-  }
 });
