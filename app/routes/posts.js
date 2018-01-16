@@ -1,9 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
+  user: Ember.computed.alias('auth.credentials.id'),
   model: function () {
-      return this.store.findAll('post');
+      return this.get('store').query('post', {
+        filter: {
+          user_id: this.getProperties('user').user
+        }
+      });
   },
+
 
   actions: {
     createPost: function (model) {
