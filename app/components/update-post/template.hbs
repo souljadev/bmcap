@@ -1,16 +1,21 @@
+{{!-- this button is toggled to show update form --}}
 <button class="tog-button" {{action 'toggleUpdateButton'}}>Update</button>
 
+{{!-- form class is toggle visibility on/off --}}
 <form class="postHeaderHidden">
-        <h3>Update this post</h3>
-        <i>(must click button to save)</i>
+        <h3>Update this post</h3> <i>(must click button to save)</i>
         <br>
+        <hr>
+        {{!-- form for updating post, data is populated in --}}
       <p>
-        Title:       {{input type="text" placeholder=post.title value=post.title}} <br>
-        First Name:  {{input type="text" placeholder=post.first_name value=post.first_name}} <br>
-        Last Name:   {{input type="text" placeholder=post.last_name value=post.last_name}} <br>
-        Picture Url: {{input type="text" placeholder=post.url value=post.url}} <br>
-        Year:        {{input type="text" placeholder=post.year value=post.year}} <br>
-        Message:     {{input type="text" placeholder=post.message value=post.message}} <br>
+        Title:       {{input type="text" placeholder="Please enter the Title of Post" value=post.title}} <br>
+        First Name:  {{input type="text" placeholder="Please enter your First Name" value=post.first_name}} <br>
+        Last Name:   {{input type="text" placeholder="Please enter your Last Name" value=post.last_name}} <br>
+        Picture Url: (Only link extensions with .JPG, .GIF, .PNG will render)
+        {{input type="text" placeholder="Please enter URL of image" value=post.url}} <br>
+        Year:        {{input type="text" placeholder="Please enter the year you had Ms Moy as a teacher" value=post.year}} <br>
+        Message:     {{input type="text" placeholder="Please enter your message" value=post.message}} <br>
       </p>
-      <button {{action "updatePost" updatePost='updatePost'}}>Update</button>
+      {{!-- updatePost action is called on this button --}}
+      <button {{action "updatePost" updatePost='updatePost'}}>Save</button>
 </form>
