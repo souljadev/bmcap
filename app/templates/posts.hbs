@@ -1,11 +1,17 @@
 
 {{#link-to 'index'}} Go to home {{/link-to}}
 
-
+<div class="leftbar">
 {{#each model as |post|}}
     <ul>
       <li>{{#link-to 'post' post }} {{post.title}} {{/link-to}}</li>
     </ul>
 {{/each}}
 
+</div>
+<br><br>
+<div class="createpostbox">
 {{#create-new-post newPost=model createPost="createPost"}}{{/create-new-post}}
+</div>
+
+{{outlet}}

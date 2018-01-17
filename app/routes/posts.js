@@ -22,7 +22,13 @@ export default Ember.Route.extend({
         url: model.url,
         year: model.year
       });
-      post.save();
-    }
+      post.save()
+      .then(() => this.transitionTo('index'))
+      .then(() => this.get('flashMessages').success('Created Successfully!'))
+      .catch(() => {
+      this.get('flashMessages')
+      .danger('There was a problem. Please make sure all fields are filled out!');
+      });
+    },
   }
 });
