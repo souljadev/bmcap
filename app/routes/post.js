@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     deletePost(model) {
       model.destroyRecord()
-      .then(() => this.transitionTo('application'))
+      .then(() => this.transitionTo('index'))
       .then(() => this.get('flashMessages').success('Delete Successful!'))
       .catch(() => {
       this.get('flashMessages')
@@ -24,7 +24,7 @@ export default Ember.Route.extend({
         year: model.year
       });
         model.save()
-        .then(() => this.transitionTo('application'))
+        .then(() => this.transitionTo('index'))
         .then(() => this.get('flashMessages').success('Update Successful!'))
         .catch(() => {
         this.get('flashMessages')
