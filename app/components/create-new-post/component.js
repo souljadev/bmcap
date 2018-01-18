@@ -14,7 +14,7 @@ export default Ember.Component.extend({
             // if there is an empty field then this error message with pop up
           } else { this.get('flashMessages')
           .danger('Please enter all fields');
-        };
+        }
             // clear each input field after submit button is clicked
             this.set('newPost.first_name', null);
             this.set('newPost.last_name', null);
