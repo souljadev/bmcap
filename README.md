@@ -16,14 +16,6 @@ Link to [BMCap](https://souljadev.github.io/bmcap/)
 Link to [Back End of App](https://github.com/souljadev/cap-back) <br>
 Link to [Heroku API](https://bmcap.herokuapp.com/)
 
-## ERD and Catalog of Routes
-
-Link to [ERD Overview](https://www.dropbox.com/s/emh8k2m6bbwss9f/BMCap%20ERD%20%281%29.pdf?dl=0)
-
-## Installation
-- fork and clone repo
-- bundle install
-
 ## User Stories
 
 - User can create an account.
