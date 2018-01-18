@@ -15,7 +15,7 @@ export default Ember.Component.extend({
           // checks to see if form fields is empty by checking empty strings
           if ((JSON.stringify(this.get('post.data.title')) !== "") &&
           (JSON.stringify(this.get('post.data.first_name')) !== "") &&
-          (JSON.stringify(this.get('post.data.last_name')) !== "") && (JSON.stringify(this.get('post.data.url')) !== "") &&
+          (JSON.stringify(this.get('post.data.last_name')) !== "") && (JSON.stringify(this.get('post.data.yearr')) !== "") &&
           (JSON.stringify(this.get('post.data.url')) !== "") && (JSON.stringify(this.get('post.data.url')) !== "")
         ) {
           // pass action up if no empty strings
